@@ -1,0 +1,17 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "financial record web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "financial",
+    "record",
+    "web",
+    "app"
+  ],
+  "author": "Alejandro Palacios",
+  "license": "ISC"
+}
