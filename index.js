@@ -20,6 +20,9 @@ app.use(express.json());
 // Routes
 app.use("/api/v1/bills", require("./routes/bills"));
 app.use("/api/v1/auth", require("./routes/auth"));
+app.use("/api/v1/incomes", require("./routes/incomes"));
+app.use("/api/v1/paychannels", require("./routes/payChannels"));
+app.use("/api/v1/categories", require("./routes/categories"));
 
 // Listen
 app.listen(process.env.PORT, () => {

@@ -21,13 +21,13 @@ router.use(validateJWT);
 router.post(
   "/new",
   [
-    check("name", "name bill is required"),
-    check("category", "category bill is required"),
-    check("detail", "detail bill is required"),
-    check("amount", "amount bill is required"),
-    check("date", "date bill is required"),
-    check("type", "type bill is required"),
-    check("paymethod", "paymethod bill is required"),
+    check("name", "name bill is required").not().isEmpty(),
+    check("category", "category bill is required").not().isEmpty(),
+    check("detail", "detail bill is required").not().isEmpty(),
+    check("amount", "amount bill is required").not().isEmpty(),
+    check("date", "date bill is required").not().isEmpty(),
+    check("type", "type bill is required").not().isEmpty(),
+    check("paymethod", "paymethod bill is required").not().isEmpty(),
     validateInputs,
   ],
   createBill

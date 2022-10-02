@@ -79,6 +79,28 @@ const getUsers = async (req, res = response) => {
   });
 };
 
+const getUser = async (req, res = response) => {
+  const { id } = req.params;
+  try {
+    const user = await User.findById(id);
+    if (!user) {
+      return res.status(404).json({
+        ok: false,
+        msg: "User not found",
+      });
+    }
+    res.json({
+      ok: true,
+      user,
+    });
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      msg: "Please contact the administrator",
+    });
+  }
+};
+
 const updateUser = async (req, res = response) => {
   const userId = req.params.id;
   const uid = req.uid;
@@ -172,6 +194,7 @@ const renewToken = async (req, res = response) => {
 module.exports = {
   createUser,
   getUsers,
+  getUser,
   updateUser,
   deleteUser,
   renewToken,
