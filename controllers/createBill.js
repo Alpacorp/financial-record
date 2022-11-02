@@ -31,7 +31,7 @@ const createBill = async (req, res = response) => {
 };
 
 const getBills = async (req, res = response) => {
-  const bills = await Bill.find({});
+  const bills = await Bill.find({}).sort({ date: -1 });
   res.json({
     ok: true,
     bills,
