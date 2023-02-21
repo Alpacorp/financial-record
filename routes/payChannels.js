@@ -11,7 +11,7 @@ const {
   getPayChannel,
   updatePayChannel,
   deletePayChannel,
-} = require("../controllers/payChannel");
+} = require("../controllers/payChannels");
 const { validateInputs } = require("../middlewares/validateInputs");
 const { validateJWT } = require("../middlewares/validateJWT");
 

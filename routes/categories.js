@@ -11,7 +11,7 @@ const {
   getCategory,
   updateCategory,
   deleteCategory,
-} = require("../controllers/category");
+} = require("../controllers/categories");
 const { validateInputs } = require("../middlewares/validateInputs");
 const { validateJWT } = require("../middlewares/validateJWT");
 

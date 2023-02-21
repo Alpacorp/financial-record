@@ -11,7 +11,7 @@ const {
   getIncome,
   updateIncome,
   deleteIncome,
-} = require("../controllers/income");
+} = require("../controllers/incomes");
 const { validateInputs } = require("../middlewares/validateInputs");
 const { validateJWT } = require("../middlewares/validateJWT");
 const router = Router();
