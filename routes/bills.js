@@ -11,7 +11,7 @@ const {
   getBill,
   updateBill,
   deleteBill,
-} = require("../controllers/createBill");
+} = require("../controllers/bills");
 const { validateInputs } = require("../middlewares/validateInputs");
 const { validateJWT } = require("../middlewares/validateJWT");
 const router = Router();
@@ -24,7 +24,7 @@ router.post(
     check("name", "name bill is required").not().isEmpty(),
     check("category", "category bill is required").not().isEmpty(),
     check("detail", "detail bill is required").not().isEmpty(),
-    check("amount", "amount bill is required").not().isEmpty(),
+    check("amount", "amount bill is required").not().isEmpty().isNumeric(),
     check("date", "date bill is required").not().isEmpty(),
     check("type", "type bill is required").not().isEmpty(),
     check("paymethod", "paymethod bill is required").not().isEmpty(),
